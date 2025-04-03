@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El-Shaddai Primary School</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; color: #333; }
+        .container { width: 80%; margin: auto; padding: 20px; }
+        .section { display: flex; align-items: center; margin-bottom: 40px; background: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); }
+        .text { flex: 1; padding-right: 20px; }
+        .image { flex: 1; }
+        .image img { width: 100%; border-radius: 10px; transition: transform 0.3s; }
+        .image img:hover { transform: scale(1.05); }
+        .three-columns { display: flex; justify-content: space-between; text-align: center; margin-top: 20px; }
+        .three-columns div { width: 30%; padding: 20px; background: maroon; color: white; border-radius: 10px; transition: background 0.3s; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); }
+        .three-columns div:hover { background: #800000; }
+        .gallery { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 40px; justify-content: center; }
+        .gallery img { width: 30%; border-radius: 10px; transition: transform 0.3s; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); }
+        .gallery img:hover { transform: scale(1.1); }
+        button { padding: 10px 20px; margin-top: 20px; border: none; background: yellow; color: maroon; border-radius: 5px; cursor: pointer; transition: background 0.3s; font-weight: bold; }
+        button:hover { background: #ffd700; }
+        h1, h2, h3 { color: blue; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to El-Shaddai Primary School</h1>
+        
+        <!-- About Section -->
+        <div class="section">
+            <div class="text">
+                <h2>About Us</h2>
+                <p>El-Shaddai Primary School is a faith-based institution committed to providing a high-quality education rooted in Christian values. We strive to cultivate a nurturing environment where students not only excel academically but also develop strong moral character, integrity, and a sense of purpose. Our mission is to inspire young minds to embrace lifelong learning while instilling in them a deep respect for Christian principles, discipline, and compassion. Through a balanced approach to education, we aim to shape responsible and confident individuals who will positively impact their communities and the world.</p>
+                <button onclick="redirectToPage()">Learn More</button>
+            </div>
+            <div class="image">
+                <img src="/public/images/uniform.jpg" alt="El-Shaddai Primary School">
+            </div>
+        </div>
+        
+        <!-- Three Columns Section -->
+        <div class="three-columns">
+            <div>
+                <h3>Academic</h3>
+                <p>We provide a comprehensive curriculum that blends strong academics with Christian principles.</p>
+            </div>
+            <div>
+                <h3>Pupil's Life</h3>
+                <p>Our school fosters a nurturing environment where students engage in co-curricular activities.</p>
+            </div>
+            <div>
+                <h3>Admission</h3>
+                <p>Join our vibrant learning community! Contact us today to learn more about enrollment.</p>
+            </div>
+        </div>
+        
+        <!-- Pupil's Gallery -->
+        <div class="gallery">
+            <img src="/public/images/kid2.jpg" alt="Happy Student">
+            <img src="/public/images/kid3_resized.jpg" alt="Classroom Activity">
+            <img src="/public/images/SPORTS1.jpg" alt="School Playground">
+            
+        </div>
+    </div>
+    
+    <script>
+        function redirectToPage() {
+            window.location.href = "/about-us/about.html"; // Change this if needed
+        }
+    </script>
+</body>
+</html>

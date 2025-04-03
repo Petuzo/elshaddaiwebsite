@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions - Elshaddai Primary School</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: maroon;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .hero {
+            background: url('admissions-banner.jpg') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .overlay {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .apply-button {
+            background-color: yellow;
+            color: maroon;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .apply-button:hover {
+            background-color: maroon;
+            color: white;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background: #f4f4f4;
+            padding: 15px;
+        }
+        .tab {
+            margin: 0 10px;
+            padding: 12px 24px;
+            background: white;
+            border: 2px solid maroon;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .tab.active, .tab:hover {
+            background: maroon;
+            color: white;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background: maroon;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .footer-links a {
+            color: yellow;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Elshaddai Primary School - Admissions
+    </header>
+    <section class="hero">
+        <div class="overlay">
+            <h1>Join the Elshaddai Family</h1>
+            <button class="apply-button">Apply Now</button>
+        </div>
+    </section>
+    <section class="tabs">
+        <button class="tab active">Pre & Primary School</button>
+    </section>
+    <section class="content">
+        <h2>Admission Procedure</h2>
+        <ul>
+            <li>Submit an application letter for admission.</li>
+            <li>Attach a copy of the birth certificate and one currently passport size photo.</li>
+            <li>Complete the <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRCXCo87XjDFOt9m-0jp9CokjfTEQUdYA3Ili84qqJSE2gWA/viewform?usp=dialog" target="_blank">Application Form</a>.</li>
+            <li>Pay the application fee and submit transaction details.</li>
+        </ul>
+    </section>
+    <footer>
+        &copy; 2025 Elshaddai Primary School | <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a>
+    </footer>
+</body>
+</html>

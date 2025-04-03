@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="publisher" content="" />
+    <meta name="copyright" content="" />
+    <meta name="creation_Date" content="07/03/2025" />
+    <meta name="expires" content="" />
+    
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>EL-Shaddai Primary School</title>
+
+    <!-- StyleSheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    
+    <!-- Local CSS Files -->
+    <link rel="stylesheet" href="/public/css/fonts.css">
+    <link rel="stylesheet" href="/public/css/style.min.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- FontAwesome (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- JavaScript File -->
+    <script src="/public/js/google.api.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+
+<body>
+   
+    <header class="mainheader" id="dynamicHeader">
+        <style>
+            .mainheader {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 20px;
+                background-size: cover;
+                background-position: center;
+                transition: background-image 1s ease-in-out;
+                height: 600px;
+                color: white;
+                position: relative;
+            }
+    
+            .navbar-header {
+                position: absolute;
+                top: 10px;
+                left: 20px;
+            }
+    
+            .navbar-brand img {
+                height: 100px; /* Increased size for visibility */
+            }
+    
+            .header-title {
+                text-align: center;
+                flex-grow: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            .header-title h1 {
+                font-size: 50px;
+                font-weight: bold;
+                margin: 0;
+                color: #fff;
+            }
+    
+            .togglearea {
+                position: absolute;
+                top: 10px;
+                right: 20px;
+            }
+    
+            .search-toggler {
+                color: white;
+                background: transparent;
+                border: none;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        </style>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+                <img src="/public/images/ELSHLOGO.png" alt="El-Shaddai Primary School">
+            </a>
+        </div>
+        <div class="header-title">
+            <h1>EL-SHADDAI PRIMARY SCHOOL</h1></br>
+          
+        </div>
+        
+        <style>
+            .header-title {
+                text-align: center; /* Centers the school name and motto */
+                margin-top: 50px; /* Adds spacing from the top */
+            }
+        
+            .header-title h1 {
+                margin-bottom: 400px; /* Adds space between the school name and motto */
+                font-size: 2.5rem; /* Adjusts the size of the school name */
+            }
+        
+            .school-motto {
+                color: gold; /* Sets the motto text color to gold */
+                font-size: 1.5rem; /* Adjusts the size of the motto text */
+            }
+        </style>
+        
+        
+        
+        <div class="togglearea">
+            <button type="button" class="search-toggler rotate-menu-text">Menu</button>
+        </div>
+        <script>
+            const images = [
+                '/public/images/smile.jpg',
+                '/public/images/class.jpg',
+                '/public/images/visiting3.jpg'
+            ];
+            
+            let index = 0;
+            function changeBackground() {
+                document.getElementById('dynamicHeader').style.backgroundImage = `url('${images[index]}')`;
+                index = (index + 1) % images.length;
+            }
+            
+            setInterval(changeBackground, 5000);
+            changeBackground(); // Initial load
+        </script>
+    </header>
+    
+    
+    
+    
+    
+    <!-- Bootstrap CSS and JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!--Menu Section-->
+    <section class="navigationblock">
+        <div class="close-search theme-btn">
+            <span class="menuclose"></span>
+            <div class="rotate-menu-text">
+                <!--<span class="">Close Menu</span>-->
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="col-lg-5 ml-auto">
+                            <div class="menusearch-form">
+                                <!-- Form action changed to relative path -->
+                                <form method="get" action="/search-results">
+                                    <div class="form-group">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1"><i class="icofont-search"></i></span>
+                                            <input type="search" class="form-control" name="s" value="" placeholder="Search Here" required>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="navigation">
+                                <ul>
+                                    <li><a href="#">Information</a>
+                                        <ul class="submenu">
+                                            <ul id="menu-information-menu" class="submenu">
+                                                <li id="menu-item-1072" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-8 current_page_item menu-item-1072"><a href="/about-us/about.html" aria-current="page">About Us</a></li>
+                                           
+                                                <li id="menu-item-1074" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1074"><a href="/about-us/calendar.html">Calendar</a></li>
+                                               
+                                            </ul>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="navigation">
+                              
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="navigation">
+                                <ul>
+                                    <li><a href="#">Admissions</a>
+                                        <ul class="submenu">
+                                            <ul id="menu-admission-menu" class="submenu">
+                                                <li id="menu-item-549" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-549"><a href="/about-us/admissions.html#">Admissions Process</a></li>
+                                              
+                                                <li id="menu-item-551" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-551"><a href="https://docs.google.com/forms/d/e/1FAIpQLSeRCXCo87XjDFOt9m-0jp9CokjfTEQUdYA3Ili84qqJSE2gWA/viewform?usp=dialog">Application Form</a></li>
+                                                <li id="menu-item-1080" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1080"><a href="/about-us/payments.html">School Fees</a></li>
+                                                <li id="menu-item-1081" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1081"><a href="/about-us/uniform.html">Uniform</a></li>
+                                                <li id="menu-item-1083" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1083"><a href="/about-us/routes.pdf">Transport</a></li>
+                                            </ul>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="navigation">
+                                <ul>
+                                    <li><a href="">Quick Links</a>
+                                        <ul class="submenu">
+                                            
+                                            <ul id="menu-quick-links" class="submenu">
+                                                <li id="menu-item-1085" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1085"><a href="/about-us/contactus.html">Contact Us</a></li>
+                                                <li id="menu-item-1088" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1088"><a href="/about-us/news.html">News &#038; Events</a></li>
+                                                <li id="menu-item-1086" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1086"><a href="/about-us/faqs.html">FAQs</a></li>
+                                               
+                                            </ul>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="navigation-btnarea">
+                        <h3>The School</h3>
+                        <ul>
+                            <li><a href="/about-us/elshaddaischool.html" class="btn btn-primary">El-Shaddai Primary School</a></li>
+                           
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="socialmenuarea">
+                <div class="row">
+                    <div class="socialmenuicons">
+                        <ul>
+                            <li> <a href="https://www.facebook.com/profile.php?id=61568216300962" target="_blank"><i class="fab fa-facebook"></i></a> </li>
+                            <li> <a href="https://x.com/elshaddai_ps" target="_blank"><i class="fa-brands fa-x-twitter"></i></a> </li>
+                            <li> <a href="https://www.instagram.com/elshaddaiprimaryschool/?__pwa=1#" target="_blank"><i class="fab fa-instagram"></i></a> </li>
+                         
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- End Header Section-->
+  
+   
+   
+    
+   <!--Breadcrumb end -->
+
+    <!--About Start-->
+    <section class="aboutsection">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-7">
+                    <div class="aboutcontent">
+
+                        <div class="campus-content">
+                            <h2>About Us</h2>
+                            <h5></h5>
+                            <p>
+                                <p>El-Shaddai Primary School is a Christian-based Primary School located in Ihumwa, Dodoma Tanzania. We are committed to academic excellence, moral integrity, and leadership development. Rooted in strong Christian values, our mission is to nurture young minds through quality education and character formation. In line with our motto, ‘Today's Readers, Tomorrow's Leaders,’ we strive to inspire lifelong learning and responsibility.</p>
+                                <p>&nbsp;</p>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-5">
+                    <div class="sidebar">
+                        <div class="sidebar__single sidebar__category">
+                            <h3 class="sidebar__title">Enrol With Us</h3>
+                            <ul class="sidebar__category-list list-unstyled">
+                                <ul id="menu-sidebar-menu" class="submenu">
+                                    <li id="menu-item-1188" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1188">
+                                        <a href="/about-us/admissions.html">How to Enroll</a>
+                                    </li>
+                                    <li id="menu-item-1189" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1189">
+                                        <a href="/about-us/calendar.html">Calendar</a>
+                                    </li>
+                                    <li id="menu-item-1193" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1193">
+                                        <a href="/about-us/routes.pdf" target="_blank">Transport</a>
+                                    </li>
+                                    <li id="menu-item-1190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1190">
+                                        <a href="/about-us/faqs.html">FAQs</a>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-values-wrapper">
+
+
+        <div class="container container-values">
+
+            <div class="row">
+                <div class="col-lg-6 mv-wrap">
+                    <div class="section-segs">
+                        <div class="vm-icon">
+                            <img src="/public/images/vision.png" alt="Our Vision">
+                        </div>
+                        <div class="vm-descr">
+                            <h4> OUR VISION</h4>
+                            <p>Nurturing youngsters Towards Leadership Excellence</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6  mv-wrap">
+                    <div class="section-segs">
+                        <div class="vm-icon">
+                            <img src="/public/images/mission.png" alt="Blog Image">
+                        </div>
+                        <div class="vm-descr">
+                            <h4>Mission</h4>
+                            <p>Our commitment is to cover in totality the Academi, spiritual and Moral requirements, by providing Lower to Higher Level Learning to develop a world wide exemplary Citizen.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <h3>CORE VALUES</h3>
+                <div class="values text-center">
+
+                    <div>
+                        <div class="value">F</div>
+                        <p>Faithfulness</p>
+                    </div>
+
+                    <div>
+                        <div class="value">C</div>
+                        <p>Compassion</p>
+                    </div>
+
+                    <div>
+                        <div class="value">W</div>
+                        <p>Wisdom</p>
+                    </div>
+
+                    <div>
+                        <div class="value">U</div>
+                        <p>Unity</p>
+                    </div>
+
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <section class="aboutsection p-60">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-7 col-lg-7">
+                    <div class="aboutimageBlock"> <img src="/public/images/why.jpg" alt="Blog Image"> </div>
+                </div>
+                <div class="col-xl-5 col-lg-5">
+                    <div class="aboutcontent">
+                        <div class="campus-content">
+                            <h2>Why El-Shaddai Primary School?</h2>
+                            <p>
+                                <p>At El-Shaddai Primary School, we provide a nurturing, high-quality education rooted in Christian values. Our mission is to shape young minds with academic excellence, moral integrity, and strong leadership skills. Here’s why El-Shaddai is the best choice for your child:</p>
+                                <p>El-Shaddai Primary School conducts formative assessments throughout the term, allowing both staff and parents to closely monitor each pupil's progress. The school also features a well-stocked library to foster a strong reading culture and a modern computer lab to enhance technological skills.</p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section style="display:none;" class="aboutsection p-60">
+
+        <div class="container">
+            <div class="row">
+
+
+                <h2 class="text-center">School Logo and Motto</h2>
+                <p class="text-center mb-5"></p>
+
+           
+
+                    <div class="logo-mean">
+                        <strong class="motto">THE MOTTO:</strong>
+                        <p>I✅ Today's Learners – We believe that every child has the potential to excel when given the right environment, guidance, and opportunities. Through quality education, strong moral values, and a nurturing atmosphere, we help students build a solid foundation for lifelong success.
+
+                            ✅ Tomorrow's Leaders – Education at El-Shaddai goes beyond academics. We cultivate critical thinking, leadership skills, integrity, and responsibility, preparing our students to become tomorrow’s changemakers—whether in their communities, workplaces, or even on a global scale.</p>
+                    </div>
+
+                </div>
+
+                <div class="col-xl-4 col-lg-4">
+                    <div class="logo-mean logoimageBlock"> <img src="/public/images/ELSHLOGO.png" alt="Blog Image"> </div>
+                </div>
+
+               
+              
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="aboutsection p-60">
+
+        <div class="container">
+
+            <div class="row">
+                <h2 class="text-center">School Logo and Motto</h2>
+              
+
+                <!-- Left Column -->
+                <div class="col-xl-4 col-lg-4 campus-content2">
+                  
+                    <div class="logo-mean">
+                        <strong class="logo-title motto">
+                            THE MOTTO:                        </strong>
+                        <p>"Today's Readers" – Encourages reading as a habit among young learners, promoting continuous learning, curiosity, and a thirst for knowledge.
+                            "Tomorrow's Leaders" – Highlights that those who engage in reading today will develop the skills needed to lead in various fields, whether in education, business, politics, or social change.</p>
+                    </div>
+                </div>
+
+                <!-- Middle Column (Image Only) -->
+                <div class="col-xl-4 col-lg-4 text-center">
+                    <div class="logo-mean logoimageBlock">
+                        <img src="/public/images/ELSHLOGO.png" alt="Logo Image">
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="col-xl-4 col-lg-4 campus-content2">
+
+                    <div class="logo-mean">
+                        <strong class="logo-title palm-tree">
+                            GENESIS 17:1                        </strong>
+                        <p>When Abram was ninety-nine years old, the Lord appeared to him and said, 'I am God Almighty; walk before me faithfully and be blameless'</p>
+                    </div>
+
+                    <div class="logo-mean">
+                        <strong class="logo-title deep-valley">
+                            EL-SHADDAI MEANING:                        </strong>
+                        <p>El-Shaddai reveals God as the all-powerful, all-sufficient provider who nourishes, protects, and fulfills His promises. It reminds believers to trust in His almighty strength and unfailing provision.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="aboutsection history-wrap">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="history-timeline">
+                    <h2 class="text-center">A Brief History</h2>
+                    <ul>
+                        <li style="--accent-color:#1d1b4a">
+                            <div class="date">2010</div>
+                            <div class="title-1" style="color:#1d1b4a;">Establishment</div>
+                            <div class="descr">El-Shaddai Primary School was established as a private day and boarding school, offering primary education.</div>
+                        </li>
+                        <li style="--accent-color:#ffc427">
+                            <div class="date">2014</div>
+                            <div class="title-1" style="color:#ffc427;">First Stanard 7 Graduation</div>
+                            <div class="descr">The first Standard 7 class graduated, marking an early milestone in the school’s primary education journey.</div>
+                        </li>
+                  
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Christian starts here-->
+    <section class="about-section" 
+    style="position: relative; width: 100%; height: 900px; background-image: url('/public/images/malasusa.jpg'); 
+           background-size: cover; background-position: center;">
+
+<!-- Text Box Overlay -->
+<div class="about-text-box" 
+    style="position: absolute; left: 50px; bottom: 50px; max-width: 400px; background-color: rgba(9, 22, 77, 0.9); 
+           color: white; padding: 20px; border-radius: 5px;">
+   
+  
+   <h2 style="color: #fff; font-weight: bold;">Christian Values</h2>
+   
+   <p style="font-size: 16px; line-height: 1.6;">
+       At El-Shaddai Primary School, we uphold Christian values as the foundation of our teaching and community. 
+       These values are drawn from biblical principles and guide students in developing strong character, integrity, and faith.
+   </p>
+   
+   <p style="font-size: 16px; line-height: 1.6;">
+       The school provides spiritual guidance and formative talks to staff, parents, and pupils.
+   </p>
+
+   
+</div>
+
+</section>
+
+
+    <!-- related start -->
+    <div class="related-section p-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-12">
+                    <div class="title">
+                        <h2>Related</h2>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="blog-sidebar__left">
+                        <div class="blog-sidebar__content-box">
+                            <div class="row align-items-center">
+                                <div class="col-lg-5">
+                                    <div class="blog-thumbnail">
+                                        <a href="/about-us/schoolact.html">
+                                            <div class="item-thumbnail-gallery">
+                                                <div class="item-thumbnail">
+                                                    <img src="/public/images/visiting3.jpg" alt="">
+                                                    <div class="thumbnail-hoverlay main-color-1-bg"></div>
+                                                    <div class="thumbnail-hoverlay-cross"></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="blog-sidebar__content">
+                                        <h3 class="blog-sidebar__title">
+                                            <a href="/about-us/schoolact.html">School Activities</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-sidebar__content-box">
+                            <div class="row align-items-center">
+                                <div class="col-lg-5">
+                                    <div class="blog-thumbnail">
+                                        <a href="/about-us/staff.html">
+                                            <div class="item-thumbnail-gallery">
+                                                <div class="item-thumbnail">
+                                                    <img src="public/images/director.jpg" alt="Staff">
+                                                    <div class="thumbnail-hoverlay main-color-1-bg"></div>
+                                                    <div class="thumbnail-hoverlay-cross"></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="blog-sidebar__content">
+                                        <h3 class="blog-sidebar__title">
+                                            <a href="/about-us/staff.html">Our Staff</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-sidebar__content-box">
+                            <div class="row align-items-center">
+                                <div class="col-lg-5">
+                                    <div class="blog-thumbnail">
+                                        <a href="/about-us/uniform.html">
+                                            <div class="item-thumbnail-gallery">
+                                                <div class="item-thumbnail">
+                                                    <img src="public/images/uniform.jpg" alt="El-Shaddai Uniform">
+                                                    <div class="thumbnail-hoverlay main-color-1-bg"></div>
+                                                    <div class="thumbnail-hoverlay-cross"></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="blog-sidebar__content">
+                                        <h3 class="blog-sidebar__title">
+                                            <a href="/about-us/uniform.html">School Uniform</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             
+
+                <div class="col-lg-3">
+                    <div class="sidebar">
+                        <div class="sidebar__single sidebar__category h-auto">
+                            <h3 class="sidebar__title">Latest News</h3>
+                            <ul class="sidebar__category-list list-unstyled">
+                              
+                                <li><a href="https://onlinesys.necta.go.tz/results/2024/psle/results/shl_ps0302106.htm"><span class="fas fa-arrow-right"></span>PLSE 2024 Standard 7 Results🌟 &#8211; El-shaddai Primary School</a></li>
+                            
+                               <li><a href="https://matokeo.necta.go.tz/results/2024/sfna/SFNA2024/ps0302106.htm"><span class="fas fa-arrow-right"></span>STANDARD FOUR NATIONAL ASSESSMENT🌟 (SFNA) - 2024 RESULTS</a></li>
+                              
+                                <li><a href="C:\Users\holyh\OneDrive\Desktop\elshaddaischool\elshaddaischool\about-us/bonanza.html"><span class="fas fa-arrow-right"></span>BONANZA DAY</a></li>
+                                <li><a href="C:\Users\holyh\OneDrive\Desktop\elshaddaischool\elshaddaischool\about-us/charity.html"><span class="fas fa-arrow-right"></span>CHARITY VISITATION</a></li>
+                                <li><a href="C:\Users\holyh\OneDrive\Desktop\elshaddaischool\elshaddaischool\about-us/visiting.html"><span class="fas fa-arrow-right"></span>VISITING DAY</a></li>
+                          
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Related end -->
+
+
+    <!-- Footer Section-->
+    <footer class="mainfooter">
+        <div class="footer-area pt-100 pb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="footer-logo-area"> <a href="index.html"><img src="/public/images/ELSHLOGO.png" alt="El-Shaddai School"></a>
+                            <div class="contact-list">
+                                <ul>
+                                    <li><i class="icon fas fa-map-marker-alt"></i><span>Ihumwa, Dodoma Tanzania</span></li>
+                                    <li><i class="icon fas fa-envelope"></i> <span><a href="">info@elshaddaiprimaryschool.co.tz</a></span></li>
+                                    <li><i class="icon fa fa-phone"></i> <span>0754 310 238 / 0767 310 238 / 0745 059 145</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="footer-widjet">
+                                    <h3>About El-Shaddai </h3>
+                                    <div class="list">
+                                        <ul>
+                                            <li><a href="/about-us/about.html" target="_blank">Who We Are</a></li>
+               
+                                            <li><a href="/about-us/calendar.html" target="_blank">Calendar Activities</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="footer-widjet">
+                                    <h3>Our School</h3>
+                                    <div class="list">
+                                        <ul>
+                                            <ul id="menu-footer-secondary-menu" class="">
+                                              <li id="menu-item-1060" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1060"><a href="/about-us/elshaddaischool.html">El-Shaddai Primary School</a></li>
+                                       
+                                            </ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="footer-widjet">
+                                    <h3>Quick Links</h3>
+                                    <div class="list">
+                                        <ul>
+                                            <ul id="menu-footer-primary-menu" class="">
+                                                <li id="menu-item-1067" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1067"><a href="/about-us/contactus.html">Contact Us</a></li>
+                                           
+                                                <li id="menu-item-1068" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1068"><a href="/about-us/cookies.html">Cookie Policy</a></li>
+                                                <li id="menu-item-1070" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1070"><a href="/about-us/faqs.html">FAQs</a></li>
+                                            </ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="copyright">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-8">
+                            <div class="copy">
+                                <p>&copy; 2025 El-Shaddai Primary School</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-4">
+                            <div class="social-content">
+                                <ul>
+                                    <li><a href="https://www.tiktok.com/@elshaddaiprimaryschool" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                                    <li><a href="https://www.facebook.com/profile.php?id=61568216300962" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                                    <li><a href="https://x.com/home" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
+                                    <li><a href="https://www.instagram.com/elshaddaiprimaryschool/?__pwa=1#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    <!-- End Footer Section-->
+
+    <!-- jQuery -->
+  <!-- Load jQuery from CDN (Faster and Reliable) -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" type="text/javascript" defer></script>
+
+<!-- Load Local jQuery as a Fallback -->
+<script type="text/javascript">
+    if (!window.jQuery) {
+        document.write('<script src="/public/js/jquery.min.js" type="text/javascript"><\/script>');
+    }
+</script>
+
+<!-- Load Your Custom JS File -->
+<script src="/public/js/main.js" type="text/javascript" defer></script>
+
+<!-- Custom Scripts -->
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        // Your custom jQuery scripts here
+        console.log("Custom scripts loaded successfully!");
+    });
+</script>
+
+
+</body>
+
+</html>

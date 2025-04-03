@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Term Calendar</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f9; margin: 0; padding: 20px; }
+        .tabs { display: flex; }
+        .tab { padding: 10px 20px; cursor: pointer; background: maroon; color: white; border: none; }
+        .tab.active { background: #800000; }
+        .content { display: none; padding: 20px; background: white; border-radius: 5px; margin-top: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        .content.active { display: block; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { padding: 10px; border: 1px solid #ddd; }
+        th { background: black; color: white; text-align: left; }
+        tr:nth-child(even) { background: #f9f9f9; }
+    </style>
+</head>
+<body>
+    <h1>School Term Calendar 2025</h1>
+    <div class="tabs">
+        <button class="tab active" onclick="showTerm(1)">Term 1</button>
+        <button class="tab" onclick="showTerm(2)">Mid-Term</button>
+        <button class="tab" onclick="showTerm(3)">Term 2</button>
+        <button class="tab" onclick="showTerm(4)">Mid-Term</button>
+    </div>
+    
+    <div id="term1" class="content active">
+        <h2>Term 1</h2>
+        <table>
+            <tr><th>Activity</th><th>Date</th></tr>
+            <tr><td>Opening School for Boarding Pupil's</td><td>5th January</td></tr>
+            <tr><td>Opening of the school</td><td>6th January</td></tr>
+            <tr><td>Academic Inspections</td><td>16th January</td></tr>
+            <tr><td>Academic and non - Academic inspections</td><td>23th January</td></tr>
+            <tr><td>Beginning of Inter-houses competition </td><td>7th February</td></tr>
+            <tr><td>Visiting day (boarding)</td><td>23th February</td></tr>
+            <tr><td>1st Pesno mock exams Standard 7</td><td>4&5th March</td></tr>
+            <tr><td>School Board Meeting </td><td>16th March</td></tr>
+            <tr><td>Parents Meeting </td><td>22nd March</td></tr>
+            <tr><td>Mid–term Exams </td><td>24&25th March</td></tr>
+            <tr><td>Closing of the school </td><td>28th March</td></tr>
+           
+        </table>
+    </div>
+    
+    <div id="term2" class="content">
+        <h2>Mid-Term</h2>
+        <table>
+            <tr><th>Activity</th><th>Date</th></tr>
+            <tr><td>Opening of the School</td><td>8th April</td></tr>
+            <tr><td>1st Pesno Mock exams Standard 4</td><td>14&15th April</td></tr>
+            <tr><td>Internal Inspections</td><td>16th April</td></tr>
+            <tr><td>2nd Pesno Mock exams Standard 7</td><td>2nd&3rd May</td></tr>
+            <tr><td>Visiting Day (boarding)</td><td>11th May</td></tr>
+            <tr><td>Terminal Exams and Corrections </td><td>2nd&3rd June</td></tr>
+            <tr><td>Extra - Carricular Activities</td><td>5th June</td></tr>
+            <tr><td>Closing of the School</td><td>6th June</td></tr>
+            <tr><td>Examinations Classes Picnic </td><td>7th June</td></tr>
+          
+        </table>
+    </div>
+    
+    <div id="term3" class="content">
+        <h2>Term 2</h2>
+        <table>
+            <tr><th>Activity</th><th>Date</th></tr>
+            <tr><td>Opening the School</td><td>8th July</td></tr>
+            <tr><td>Final inter-houses competition day</td><td>18th July</td></tr>
+            <tr><td>Workers VS Parents Sports and Games Competitions</td><td>19th July</td></tr>
+            <tr><td>2nd PESNO Mock Standard Four</td><td>21st&22nd July</td></tr>
+            <tr><td>Visiting day (boarding)s</td><td>27th July</td></tr>
+            <tr><td>Standard VII Graduation Ceremony </td><td>2nd August</td></tr>
+            <tr><td>PESNO Std 7 Pre-National </td><td>4&5th August</td></tr>
+            <tr><td>Midterm Exams </td><td>25&26th August</td></tr>
+            <tr><td>Closing of the school</td><td>29th August</td></tr>
+            <tr><td>Std 7 National Examination</td><td>" "</td></tr>
+           
+        </table>
+    </div>
+    
+    <div id="term4" class="content">
+        <h2>Mid-Term</h2>
+        <table>
+            <tr><th>Activity</th><th>Date</th></tr>
+            <tr><td>School Re-opens (Boarding Schorlars)</td><td>14th September</td></tr>
+            <tr><td>School Re-opens (Day Schorlars)</td><td>15th September</td></tr>
+            <tr><td>Internal inspections </td><td>25th September</td></tr>
+            <tr><td>3rd PESNO Mock Exams Standard 4</td><td>6&7th October</td></tr>
+            <tr><td>Standard 4 National Examination </td><td>" "</td></tr>
+            <tr><td>Visiting day (boarding)</td><td>2nd November</td></tr>
+            <tr><td>School Board Meeting</td><td>16th November</td></tr>
+            <tr><td>Parents Meeting</td><td>19th November</td></tr>
+            <tr><td>Annual examination & corrections </td><td>24&25th November</td></tr>
+            <tr><td>Extra- Curricular activities</td><td>27th November</td></tr>
+            <tr><td>Closing of the School</td><td>5th December</td></tr>
+        </table>
+    </div>
+    
+    <script>
+        function showTerm(term) {
+            document.querySelectorAll('.content').forEach(div => div.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(button => button.classList.remove('active'));
+            document.getElementById('term' + term).classList.add('active');
+            document.querySelectorAll('.tab')[term - 1].classList.add('active');
+        }
+    </script>
+</body>
+</html>

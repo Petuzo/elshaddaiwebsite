@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - El-Shaddai Primary School</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; color: #333; }
+        .container { width: 80%; margin: auto; padding: 20px; }
+        h1, h2 { text-align: center; color: blue; }
+        .faq-section { background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); margin-top: 20px; }
+        .faq-item { margin-bottom: 20px; }
+        .question { font-weight: bold; color: maroon; cursor: pointer; }
+        .answer { display: none; margin-top: 5px; padding-left: 10px; color: #333; }
+    </style>
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-section">
+            <div class="faq-item">
+                <p class="question" onclick="toggleAnswer('faq1')">1. What curriculum does El-Shaddai Primary School follow?</p>
+                <p class="answer" id="faq1">El-Shaddai Primary School follows the Tanzanian national curriculum with a focus on academic excellence and Christian values.</p>
+            </div>
+            <div class="faq-item">
+                <p class="question" onclick="toggleAnswer('faq2')">2. What are the school hours?</p>
+                <p class="answer" id="faq2">Classes run from Monday to Friday, 8:00 AM to 3:30 PM.</p>
+            </div>
+            <div class="faq-item">
+                <p class="question" onclick="toggleAnswer('faq3')">3. How do I apply for admission?</p>
+                <p class="answer" id="faq3">Parents can visit our school office or contact us via email to get the admission forms and further details.</p>
+            </div>
+            <div class="faq-item">
+                <p class="question" onclick="toggleAnswer('faq4')">4. Does the school provide meals?</p>
+                <p class="answer" id="faq4">Yes, the school provides nutritious meals for students during lunch hours.</p>
+            </div>
+            <div class="faq-item">
+                <p class="question" onclick="toggleAnswer('faq5')">5. Are there extracurricular activities?</p>
+                <p class="answer" id="faq5">Yes, we offer sports, music, arts, and other extracurricular activities to enhance student development.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
